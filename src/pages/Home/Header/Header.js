@@ -1,6 +1,6 @@
 import React from "react";
 import "./Header.css";
-import { Carousel, Col, Container, Row } from "react-bootstrap";
+import { Button, Carousel, Col, Container, Row } from "react-bootstrap";
 import slider1 from "../../../assests/slider1.png";
 import slider2 from "../../../assests/slider2.png";
 
@@ -13,14 +13,19 @@ const Header = () => {
       <Container>
         <Carousel>
           <Carousel.Item>
-            <Row>
-              <Col sm={12} md={6}>
+            <Row className="my-5 py-5 g-5">
+              <Col xs={12} sm={12} md={6}>
                 <h1 className="banner_header">Development is our Goal Ever</h1>
+                <p>
+                  We are a boutique digital transformation consultancy and
+                  software development company.
+                </p>
+                <Button variant="primary">Start Free Trail</Button>
               </Col>
-              <Col sm={12} md={6}>
+              <Col xs={12} sm={12} md={6}>
                 {" "}
                 <img
-                  className="d-block w-100 banner_img"
+                  className="d-block banner_img"
                   src={slider1}
                   alt="First slide"
                 />
@@ -28,14 +33,19 @@ const Header = () => {
             </Row>
           </Carousel.Item>
           <Carousel.Item>
-            <Row>
-              <Col sm={12} md={6}>
+            <Row className="my-5 py-5 g-5">
+              <Col xs={12} sm={12} md={6}>
                 <h1 className="banner_header">Development is our Goal Ever</h1>
+                <p>
+                  We are a boutique digital transformation consultancy and
+                  software development company.
+                </p>
+                <Button variant="primary">Start Free Trail</Button>
               </Col>
-              <Col sm={12} md={6}>
+              <Col xs={12} sm={12} md={6}>
                 {" "}
                 <img
-                  className="d-block w-100"
+                  className="d-block banner_img"
                   src={slider2}
                   alt="First slide"
                 />
