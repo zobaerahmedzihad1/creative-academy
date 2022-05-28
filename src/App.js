@@ -4,8 +4,8 @@ import NavBar from "./components/NavBar/NavBar";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import Faq from "./pages/Faq/Faq";
-import Home from "./pages/Home/Home";
 import Services from "./pages/AllServices/AllServices";
+import Home from "./pages/Home/Home/Home";
 
 function App() {
   return (
