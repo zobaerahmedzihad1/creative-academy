@@ -12,13 +12,13 @@ import { FiSend } from "react-icons/fi";
 const Footer = () => {
   const notify = () =>
     toast.success("Email Send Successfully !", {
-        position: "top-center",
-        autoClose: 1500,
-        hideProgressBar: true,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
+      position: "top-center",
+      autoClose: 1500,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
     });
 
   return (
@@ -29,7 +29,7 @@ const Footer = () => {
             <h4 className="fw-bold">Creative Academy</h4>
             <div className="social_icons mb-2">
               <span>
-                <a href="https://www.facebook.com" target="_blank">
+                <a href="https://www.facebook.com/zobaerahmedzihad" target="_blank">
                   <FaFacebookSquare className="social_icon" />
                 </a>
               </span>
@@ -64,6 +64,13 @@ const Footer = () => {
           <Col xs={12} sm={6} md={3}>
             <h4 className="fw-bold">WORK INQUIRIES</h4>
             <p>Interested in working with us? zobaerahmedzihad1@gmail.com</p>
+            <h4 className="fw-bold">PHONE</h4>
+            <div>
+              <p className="font-weight-normal">
+                +880 1623171474 <br />
+                +880 1630704167
+              </p>
+            </div>
           </Col>
           <Col xs={12} sm={6} md={3}>
             <h4 className="fw-bold">STAY IN TOUCH</h4>
@@ -74,6 +81,7 @@ const Footer = () => {
                 placeholder="Enter Your Email"
                 aria-label="Recipient's username"
                 aria-describedby="basic-addon2"
+                required
               />
               <div class="input-group-append">
                 <button

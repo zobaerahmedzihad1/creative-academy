@@ -7,6 +7,7 @@ import ServiceCard from "../ServiceCard/ServiceCard";
 
 const Services = () => {
   const [services] = useServices();
+  // console.log(services, "home");
   const homeServices = services.slice(0, 4);
   return (
     <>

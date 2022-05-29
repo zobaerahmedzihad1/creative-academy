@@ -7,7 +7,7 @@ const NavBar = () => {
     <>
       <Navbar bg="light" variant="light">
         <Container>
-          <Navbar.Brand href="#home" className="fw-bold">
+          <Navbar.Brand as={NavLink} to="/home" className="fw-bold">
             Creative Academy
           </Navbar.Brand>
           <Nav className="ms-auto">
