@@ -12,7 +12,7 @@ const ServiceCard = ({ service }) => {
         style={{ width: "20rem"}}
         className="shadow p-3 mb-1 bg-white rounded service_card"
       >
-        <Card.Img variant="top" className="w-75 m-auto p-3" src={img} />
+        <Card.Img variant="top" className="cardImg m-auto p-3" src={img} />
         <Card.Body className="text-center">
           <Card.Title className="fw-bold">{title}</Card.Title>
           <Card.Text style={{ fontWeight: "500" }} className="text-start">

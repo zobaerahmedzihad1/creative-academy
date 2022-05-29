@@ -1,0 +1,17 @@
+.social_icons span{
+    font-size: 10px;
+   padding: 5px;
+}
+.social_icon{
+    
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #0b5ed7;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+}
+.copyright{
+    font-size: 14px;
+}
