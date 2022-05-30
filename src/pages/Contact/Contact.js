@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 import { Button, Form } from "react-bootstrap";
 
 const Contact = () => {
-  const [formData, setFormData] = useState('');
+  const [formData, setFormData] = useState("");
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
@@ -16,6 +15,15 @@ const Contact = () => {
 
     const info = { email, phone, address, message };
     setFormData(info);
+    toast.success("Successfully Send !", {
+      position: "top-center",
+      autoClose: 1500,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
     event.target.reset();
   };
 
@@ -42,11 +50,11 @@ const Contact = () => {
               required
               autoComplete="off"
               placeholder="Enter email"
-            //  {
-            //    if(!formData.email){
-            //     isInvalid
-            //    }
-            //  }
+              //  {
+              //    if(!formData.email){
+              //     isInvalid
+              //    }
+              //  }
             />
           </Form.Group>
 

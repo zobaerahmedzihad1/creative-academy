@@ -1,7 +1,6 @@
 import React from "react";
 import "./Footer.css";
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import { Col, Container, Row } from "react-bootstrap";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
@@ -94,7 +93,7 @@ const Footer = () => {
                 >
                   <FiSend />
                 </button>
-                <ToastContainer />
+                
               </div>
             </div>
           </Col>
