@@ -33,14 +33,15 @@ const Contact = () => {
 
   return (
     <div>
-      <div className="text-center pt-4">
-        <h3 className="fw-bold">Get In Touch</h3>
-        <p>Please fill the form. Our team will contact you.</p>
-      </div>
-      <Row>
-        <Col sm={3} md={3}>
-          {/* <Container> */}
-            <div className="support_contact mt-5 ms-5">
+      <Container>
+        <div className="text-center pt-4">
+          <h3 className="fw-bold">Get In Touch</h3>
+          <p>Please fill the form. Our team will contact you.</p>
+        </div>
+
+        <Row className="g-5">
+          <Col sm={4} md={4}>
+            <div className="support_contact">
               <div className="p-4">
                 <h4 className="fw-bold mb-4">Support Contact</h4>
                 <div className="d-flex mb-3">
@@ -69,77 +70,76 @@ const Contact = () => {
                     <h6>Bangladesh.</h6>
                   </div>
                 </div>
-                
               </div>
             </div>
-          {/* </Container> */}
-        </Col>
-        <Col sm={9} md={9}>
-          <Form
-            className="w-75 mx-auto shadow p-3 m-5 bg-white rounded"
-            onSubmit={handleFormSubmit}
-          >
-            <div className="d-flex">
-              <Form.Group
-                hasValidation
-                className="mb-3 w-50 me-4"
-                controlId="formBasicEmail"
-              >
-                <Form.Label>Email address</Form.Label>
+          </Col>
+          <Col sm={8} md={8}>
+            <Form
+              className=" mx-auto shadow p-3 my-5 bg-white rounded"
+              onSubmit={handleFormSubmit}
+            >
+              <div className="d-flex">
+                <Form.Group
+                  hasValidation
+                  className="mb-3 w-50 me-4"
+                  controlId="formBasicEmail"
+                >
+                  <Form.Label>Email address</Form.Label>
+                  <Form.Control
+                    name="email"
+                    type="email"
+                    required
+                    autoComplete="off"
+                    placeholder="Enter email"
+                  />
+                </Form.Group>
+
+                <Form.Group className="mb-3 w-50" controlId="formBasicEmail">
+                  <Form.Label>Phone</Form.Label>
+                  <Form.Control
+                    name="phone"
+                    required
+                    type="number"
+                    placeholder="Enter phone"
+                    autoComplete="off"
+                  />
+                </Form.Group>
+              </div>
+              <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Label>Address</Form.Label>
                 <Form.Control
-                  name="email"
-                  type="email"
                   required
+                  name="address"
+                  type="text"
+                  placeholder="Address"
                   autoComplete="off"
-                  placeholder="Enter email"
                 />
               </Form.Group>
 
-              <Form.Group className="mb-3 w-50" controlId="formBasicEmail">
-                <Form.Label>Phone</Form.Label>
+              <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Label>Your Message</Form.Label>
                 <Form.Control
-                  name="phone"
                   required
-                  type="number"
-                  placeholder="Enter phone"
+                  name="message"
+                  as="textarea"
+                  type="text"
+                  placeholder="Leave a message here"
                   autoComplete="off"
+                  className="pb-5"
                 />
               </Form.Group>
-            </div>
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label>Address</Form.Label>
-              <Form.Control
-                required
-                name="address"
-                type="text"
-                placeholder="Address"
-                autoComplete="off"
-              />
-            </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label>Your Message</Form.Label>
-              <Form.Control
-                required
-                name="message"
-                as="textarea"
-                type="text"
-                placeholder="Leave a message here"
-                autoComplete="off"
-                className="pb-5"
-              />
-            </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                <Form.Check type="checkbox" label="I'm not a Robot" />
+              </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicCheckbox">
-              <Form.Check type="checkbox" label="I'm not a Robot" />
-            </Form.Group>
-
-            <Button variant="primary" type="submit">
-              Send
-            </Button>
-          </Form>
-        </Col>
-      </Row>
+              <Button variant="primary" type="submit">
+                Send
+              </Button>
+            </Form>
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 };
