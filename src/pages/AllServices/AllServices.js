@@ -1,10 +1,7 @@
 import React from "react";
+import { Container, Row } from "react-bootstrap";
 import useServices from "../../hooks/useServices";
-import { FaMoneyBill } from "react-icons/fa";
-import { BsFillCartPlusFill } from "react-icons/bs";
-import { Button, Card, Col, Row } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import ServiceCard from "../Home/ServiceCard/ServiceCard";
+import AllServiceCard from "./AllServiceCard";
 
 const Services = () => {
   const [services] = useServices();
@@ -12,9 +9,13 @@ const Services = () => {
   return (
     <div>
       <h1 className="fw-bold text-center py-5">Our All Service</h1>
-      <Row>
-        
-      </Row>
+      <Container>
+        <Row className="g-4" >
+          {services.map((service) => (
+            <AllServiceCard key={service.id} service={service}></AllServiceCard>
+          ))}
+        </Row>
+      </Container>
     </div>
   );
 };
