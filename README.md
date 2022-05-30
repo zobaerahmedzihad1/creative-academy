@@ -25,7 +25,7 @@ https://creativeacademy.netlify.app/
 - [x] Axios
 - [x] Hooks (useState, useEffect, custom Hook)
 - [x] FakeData
-- [x] ReactIcons
+- [x] React Icons
 - [x] React Tostify
 
 ---
