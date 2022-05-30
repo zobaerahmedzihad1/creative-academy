@@ -39,11 +39,11 @@ const Contact = () => {
       </div>
       <Row>
         <Col sm={3} md={3}>
-          <Container>
-            <div className="support_contact mt-5">
+          {/* <Container> */}
+            <div className="support_contact mt-5 ms-5">
               <div className="p-4">
-                <h4 className="fw-bold">Support Contact</h4>
-                <div className="d-flex">
+                <h4 className="fw-bold mb-4">Support Contact</h4>
+                <div className="d-flex mb-3">
                   <AiOutlinePhone className="icon" />
                   <div className="ps-4">
                     <h5 className="fw-bold">Phone</h5>
@@ -52,7 +52,7 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="d-flex">
+                <div className="d-flex mb-3">
                   <HiOutlineMail className="icon" />
                   <div className="ps-4">
                     <h5 className="fw-bold">Email</h5>
@@ -61,7 +61,7 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="d-flex">
+                <div className="d-flex mb-3">
                   <GoLocation className="icon" />
                   <div className="ps-4">
                     <h5 className="fw-bold">Location</h5>
@@ -72,7 +72,7 @@ const Contact = () => {
                 
               </div>
             </div>
-          </Container>
+          {/* </Container> */}
         </Col>
         <Col sm={9} md={9}>
           <Form
