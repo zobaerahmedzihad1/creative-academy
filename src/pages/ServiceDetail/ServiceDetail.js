@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Button, Card } from "react-bootstrap";
 import { Link, useParams } from "react-router-dom";
-// import useServices from "../../hooks/useServices";
 import { FaMoneyBill } from "react-icons/fa";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 
 const ServiceDetail = () => {
   const { id } = useParams();
-  // console.log(typeof id);
 
   const [services, setServices] = useState([]);
   useEffect(() => {
@@ -19,9 +17,7 @@ const ServiceDetail = () => {
   }, []);
 
   const selectedService = services.find((service) => service.id === Number(id));
-  // if (selectedService.id) {
-  //   var { img, title, description, price } = selectedService;
-  // }
+
   return (
     <div>
       <Card
