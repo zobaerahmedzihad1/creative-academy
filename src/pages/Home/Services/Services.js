@@ -1,7 +1,7 @@
 import React from "react";
 import "./Services.css";
 import { Col, Container, Row } from "react-bootstrap";
-import serviceImg from "../../../assests/service-section.png";
+import serviceImg from "../../../assests/service-section.gif";
 import useServices from "../../../hooks/useServices";
 import ServiceCard from "../ServiceCard/ServiceCard";
 
@@ -10,8 +10,10 @@ const Services = () => {
   // console.log(services, "home");
   const homeServices = services.slice(0, 4);
   return (
-    <>
-      <h1 className="fw-bold text-center mb-5">Our Best Services</h1>
+    <div className="py-4">
+      <h1 className="fw-bold text-center mb-5 ">
+        Our Best <span >Services</span>
+      </h1>
       <Container>
         <Row>
           <Col xs={12} md={5} className="d-flex align-items-center">
@@ -26,7 +28,7 @@ const Services = () => {
           </Col>
         </Row>
       </Container>
-    </>
+    </div>
   );
 };
 

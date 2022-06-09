@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import { ToastContainer, toast } from "react-toastify";
-import { Col, Container, Row } from "react-bootstrap";
+import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaTwitterSquare } from "react-icons/fa";
@@ -9,6 +9,16 @@ import { FaLinkedin } from "react-icons/fa";
 import { FiSend } from "react-icons/fi";
 
 const Footer = () => {
+  const handleEmailSubmit = (e) => {
+    const email = e.target.email.value;
+    if (!email) {
+      notify();
+    } 
+
+    e.preventDefault();
+    e.target.reset();
+  };
+
   const notify = () =>
     toast.success("Email Send Successfully !", {
       position: "top-center",
@@ -28,22 +38,25 @@ const Footer = () => {
             <h4 className="fw-bold">Creative Academy</h4>
             <div className="social_icons mb-2">
               <span>
-                <a href="https://www.facebook.com/zobaerahmedzihad" target="_blank">
+                <a
+                  href="https://www.facebook.com/zobaerahmedzihad"
+                  target="_blank."
+                >
                   <FaFacebookSquare className="social_icon" />
                 </a>
               </span>
               <span>
-                <a href="https://www.instagram.com" target="_blank">
+                <a href="https://www.instagram.com" target="_blank.">
                   <FaInstagramSquare className="social_icon" />
                 </a>
               </span>
               <span>
-                <a href="https://www.twitter.com" target="_blank">
+                <a href="https://www.twitter.com" target="_blank.">
                   <FaTwitterSquare className="social_icon" />
                 </a>
               </span>
               <span>
-                <a href="https://www.instagram.com/" target="_blank">
+                <a href="https://www.instagram.com/" target="_blank.">
                   <FaLinkedin className="social_icon" />
                 </a>
               </span>
@@ -74,27 +87,41 @@ const Footer = () => {
           <Col xs={12} sm={6} md={3}>
             <h4 className="fw-bold">STAY IN TOUCH</h4>
             <div class="input-group mb-3">
-              <input
-                type="email"
-                class="form-control"
-                placeholder="Enter Your Email"
-                aria-label="Recipient's username"
-                aria-describedby="basic-addon2"
-                required
-              />
-              <div class="input-group-append">
-                <button
+              <Form className="d-flex" onSubmit={handleEmailSubmit}>
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control"
+                  placeholder="Enter Your Email"
+                  aria-label="Recipient's username"
+                  aria-describedby="basic-addon2"
+                  required
+                  id="email"
+                  autoComplete="off"
+                />
+
+                <Button
+                  id="email"
+                  class="btn btn-primary"
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  title="Send"
+                  type="submit"
+                >
+                  <FiSend />
+                </Button>
+
+                {/* <button
+                  id="email"
                   type="button"
                   class="btn btn-primary"
                   data-toggle="tooltip"
                   data-placement="top"
                   title="Send"
-                  onClick={notify}
                 >
                   <FiSend />
-                </button>
-                
-              </div>
+                </button> */}
+              </Form>
             </div>
           </Col>
         </Row>

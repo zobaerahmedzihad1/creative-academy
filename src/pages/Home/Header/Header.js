@@ -1,13 +1,13 @@
 import React from "react";
 import "./Header.css";
 import { Button, Carousel, Col, Container, Row } from "react-bootstrap";
-import slider1 from "../../../assests/slider1.png";
-import slider2 from "../../../assests/slider2.png";
+import slider2 from "../../../assests/gifSlider.gif";
+import slider1 from "../../../assests/gifSlider2.gif";
 
 const Header = () => {
   return (
     <div
-      className="bg-light d-flex align-items-center"
+      className=" d-flex align-items-center"
       style={{ height: "90vh" }}
     >
       <Container>
